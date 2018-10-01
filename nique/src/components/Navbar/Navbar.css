@@ -1,0 +1,32 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+  height:100px;
+}
+.navbar-inverse .navbar-brand {
+  color: #C9A366;
+}
+
+#bar {
+  border-color: #AB6D45;
+  border-width: 3px;
+  background-color: #BB271B;
+}
+
+.navbar {
+  max-height: 170px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #C9A366;
+}
+
+@media (max-width: 767px) {
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  background-color:#BB271B;
+  width:fit-content;
+  z-index:1000;
+  position:absolute;
+}
+
+}
