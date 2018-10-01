@@ -7,12 +7,13 @@ import Nique5 from "./Photos/Nique_Teaching.jpg";
 import Nique6 from "./Photos/Nique_Coaching.jpeg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import "./Carousel.css";
 
 
 class DemoCarousel extends Component {
     render() {
         return (
-            <Carousel showArrows={true} autoPlay={true }showThumbs={true} emulateTouch={true} showStatus={false}>
+            <Carousel infiniteLoop={true} interval={3000} showArrows={true} autoPlay={true} showThumbs={true} emulateTouch={true} showStatus={false}>
                 <div>
                     <img src={Nique1} alt="" />
                     <p className="legend">Nothing Worth Acheiving is Easy to Acheive</p>

@@ -6,7 +6,7 @@ import {Grid, Row, Col} from "react-bootstrap";
 import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from "react-bootstrap"
 
 
-// Logo is 1110 X 525
+// Logo is 1113 X 525 = 2.12  =>  253 x 120 = 2.1225 ***At a height of 120px, the width is perfect at 75%**
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbars = props => (
