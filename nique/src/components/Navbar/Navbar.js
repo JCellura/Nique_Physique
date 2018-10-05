@@ -13,7 +13,22 @@ const Navbars = props => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Grid>
       <Row>
-        <Col xs={12} md={8} lg={8} style={{height: "120px", marginBottom: "15px"}}> 
+        <Col xs={12} sm={6} md={4} lg={4} style={{height: "120px", marginBottom: "15px"}}> 
+          <Link className="navbar-brand" to="/">
+            <img alt="Logo" src={Logo} style={{width:"75%", height: "120px", marginLeft:"12.5%"}} />
+          </Link>
+        </Col>
+        <Col xsHidden={true} sm={6} md={4} lg={4} style={{height: "120px", marginBottom: "15px"}}> 
+          <Link className="navbar-brand" to="/">
+            <img alt="Logo" src={Logo} style={{width:"75%", height: "120px", marginLeft:"12.5%"}} />
+          </Link>
+        </Col>
+        <Col xsHidden={true} smHidden={true} md={4} lg={4} style={{height: "120px", marginBottom: "15px"}}> 
+          <Link className="navbar-brand" to="/">
+            <img alt="Logo" src={Logo} style={{width:"75%", height: "120px", marginLeft:"12.5%"}} />
+          </Link>
+        </Col>
+        <Col xsHidden={true} smHidden={true} mdHidden={true} lgHidden={true} style={{height: "120px", marginBottom: "15px"}}> 
           <Link className="navbar-brand" to="/">
             <img alt="Logo" src={Logo} style={{width:"75%", height: "120px", marginLeft:"12.5%"}} />
           </Link>
@@ -30,13 +45,13 @@ const Navbars = props => (
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem eventKey={1} href="#">
-            Link
+          <NavItem eventKey={1} href="/coaching">
+            Coaching
           </NavItem>
           <NavItem eventKey={2} href="#">
-            Link
+            Training
           </NavItem>
-          <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown eventKey={3} title="Success Stories" id="basic-nav-dropdown">
             <MenuItem eventKey={3.1}>Action</MenuItem>
             <MenuItem eventKey={3.2}>Another action</MenuItem>
             <MenuItem eventKey={3.3}>Something else here</MenuItem>
@@ -46,10 +61,10 @@ const Navbars = props => (
         </Nav>
         <Nav pullRight>
           <NavItem eventKey={1} href="#">
-            Link Right
+            Sponsers
           </NavItem>
           <NavItem eventKey={2} href="#">
-            Link Right
+            Social Media
           </NavItem>
         </Nav>
       </Navbar.Collapse>

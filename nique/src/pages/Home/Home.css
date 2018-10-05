@@ -1,0 +1,23 @@
+#summary {
+    color:white;
+    text-align:center;
+    font-size:large;
+    letter-spacing: 1px;
+    font-family: Arial;
+    font-style: italic;
+    /* font-weight:bold; */
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+
+.show-grid {
+    margin-top: 20px;
+}
+
+@media (max-width: 990px) {
+
+    #emailForm {
+        width:90%;
+        margin-left:5%;
+    }
+
+}

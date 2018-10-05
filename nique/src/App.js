@@ -5,7 +5,8 @@ import './App.css';
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Navbars from "./components/Navbar";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home.js";
+import Coaching from "./pages/Coaching/Coaching";
 
 class App extends Component {
   render() {
@@ -15,8 +16,8 @@ class App extends Component {
           <Navbars />
           <Wrapper id={"wrapper"}>
             <Route exact path="/" component={Home} />
-            {/* <Route exact path="/about" component={About} />
-            <Route exact path="/discover" component={Discover} />
+            <Route exact path="/coaching" component={Coaching} />
+            {/* <Route exact path="/discover" component={Discover} />
             <Route exact path="/search" component={Search} /> */}
           </Wrapper>
           <Footer />
