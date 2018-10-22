@@ -98,7 +98,7 @@ class Home extends Component {
                             </Form>
                         </Col>
                         <Col xs={12} md={4} lg={4}>
-                            <code>{'<Col xs={6} md={4} />'}</code>
+                            {/* <code>{'<Col xs={6} md={4} />'}</code> */}
                         </Col>
                     </Row>
 
