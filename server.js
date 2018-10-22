@@ -7,10 +7,6 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-  }
-
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
     app.use(express.static('client/build'));
