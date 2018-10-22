@@ -4,10 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\" ",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node --experimental-modules server.js --exec babel-node --presets env,stage-2",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "cd client && npm run start",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "   
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
     "concurrently": "^4.0.1",
     "express": "^4.16.4",
     "nodemailer": "^4.6.8",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "if-env": "^1.0.4"
   },
   "engines": {
     "node": "9.3.0"
