@@ -1,0 +1,30 @@
+{
+  "name": "nique_physique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCellura/Nique_Physique.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCellura/Nique_Physique/issues"
+  },
+  "homepage": "https://github.com/JCellura/Nique_Physique#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "nodemailer": "^4.6.8",
+    "nodemon": "^1.18.4"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nique",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fs": "^0.0.1-security",
+    "npm": "^6.4.1",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-responsive-carousel": "^3.1.42",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "request": "^2.88.0",
+    "twitter": "^1.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build-dev": "dotenv -e .env.development react-app-rewired build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,22 @@
+.btn-group-lg>.btn, .btn-lg {
+    margin-top: 15px;
+    width: 80%;
+}
+
+.modalTitle {
+    font-size: 25px;
+}
+
+@media (max-width: 1200px ) {
+
+    .modalTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 625px ) {
+
+    .modalTitle {
+        font-size: 15px;
+    }
+}
