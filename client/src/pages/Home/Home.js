@@ -30,7 +30,7 @@ class Home extends Component {
 
         })
 
-        window.location.reload();
+        // window.location.reload();
     };
 
     handleChange = event => {
