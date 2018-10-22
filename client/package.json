@@ -16,6 +16,9 @@
     "request": "^2.88.0",
     "twitter": "^1.7.1"
   },
+  "devDependencies": {
+    "react-scripts": "^1.1.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build-dev": "dotenv -e .env.development react-app-rewired build",
