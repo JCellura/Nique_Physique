@@ -2,21 +2,10 @@ import React, { Component } from "react";
 import "./SocialMedia.css";
 import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from "react-bootstrap";
 import Twitter from "twitter";
-// import request from "request";
-// import fs from "fs";
-// const dotenv = require("dotenv");
-// import dotenv from "dotenv/config";
 
 require("dotenv").config();
 
 const keys = require('../../utils/keys');
-
- 
-// if (result.error) {
-//   throw result.error
-// }
- 
-// console.log(result.parsed);
 
 const twitterKeys = keys.twitter;
 console.log(twitterKeys);
@@ -33,31 +22,31 @@ class SocialMedia extends Component {
         // this.retriveTweets();
     }
 
-    // retriveTweets = () => {
+    retriveTweets = () => {
 
-    //     const client = new Twitter(twitterKeys);
+        const client = new Twitter(twitterKeys);
 
-    //     let params = {screen_name: "fullstack_coder", count:20};
+        let params = {screen_name: "fullstack_coder", count:20};
 
-    //     client.get('statuses/user_timeline', params, (error,tweets,response) => {
-    //         if (error) {
-    //             console.log(error);
-    //             return
-    //         } else {
-    //             var outputStr = '------------------------\n' +
-	// 						'User Tweets:\n' + 
-    //                         '------------------------\n\n';
+        client.get('statuses/user_timeline', params, (error,tweets,response) => {
+            if (error) {
+                console.log(error);
+                return
+            } else {
+                var outputStr = '------------------------\n' +
+							'User Tweets:\n' + 
+                            '------------------------\n\n';
                 
-    //             for (let i = 0; i < tweets.length; i++) {
-    //                 outputStr += 'Created on: ' + tweets[i].created_at + '\n' + 
-    //                                 'Tweet content: ' + tweets[i].text + '\n' +
-    //                                 '------------------------\n';
-    //             }
-    //         }
-    //         console.log(outputStr);
-    //     })
+                for (let i = 0; i < tweets.length; i++) {
+                    outputStr += 'Created on: ' + tweets[i].created_at + '\n' + 
+                                    'Tweet content: ' + tweets[i].text + '\n' +
+                                    '------------------------\n';
+                }
+            }
+            console.log(outputStr);
+        })
 
-    // }
+    }
 
     render() {
         return (

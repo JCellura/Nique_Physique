@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./Home.css"
+// import { Redirect, Link } from 'react-router-dom';
+import "./Home.css";
 // import API from "../utils/API";
 // import Card from "../components/Card";
 // import Alert from "../components/Alert";
@@ -7,8 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from "../../components/Carousel/Carousel";
 import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from "react-bootstrap";
 import axios from "axios";
-const keys = require('../../utils/keys');
-require("dotenv").config();
+// const keys = require('../../utils/keys');
 
 class Home extends Component {
     state = {
@@ -18,25 +18,33 @@ class Home extends Component {
     };
 
     componentDidMount() {
-        console.log(keys);
-        const emailKeys = keys.nique;
-        console.log(emailKeys);
-        console.log(process.env);
+        // console.log(keys);
+        // const emailKeys = keys.nique;
+        // console.log(emailKeys);
+        // console.log(process.env);
     }
 
     handleSubmit = event => {
         event.preventDefault();
         const {name, email, message} = this.state;
 
-        const form = axios.post("/api/form", {
+        axios.post("/api/form", {
             name,
             email,
             message
         }).then(response => {
 
+          console.log("not sure why this isn't working?");
+            
+        }).catch(error => {
+            console.log(error);
         })
 
-        // window.location.reload();
+        this.setState({
+            name: "",
+            email: "",
+            message: ""
+        })
     };
 
     handleChange = event => {
@@ -69,7 +77,7 @@ class Home extends Component {
                                 <ControlLabel>Send Me Email With Any Questions</ControlLabel>
                                     <FormControl
                                         type="text"
-                                        value={this.state.value}
+                                        value={this.state.name}
                                         name="name"
                                         placeholder="Enter Your Name"
                                         onChange={this.handleChange}
@@ -78,7 +86,7 @@ class Home extends Component {
                                 <FormGroup>
                                     <FormControl
                                         type="email"
-                                        value={this.state.value}
+                                        value={this.state.email}
                                         name="email"
                                         placeholder="Enter Your Email"
                                         onChange={this.handleChange}
@@ -88,7 +96,7 @@ class Home extends Component {
                                     <FormControl
                                         type="text"
                                         componentClass="textarea"
-                                        value={this.state.text}
+                                        value={this.state.message}
                                         name="message"
                                         placeholder="Enter Message Here"
                                         onChange={this.handleChange}
@@ -99,7 +107,8 @@ class Home extends Component {
                                 <Button 
                                     type="submit"
                                     onClick={this.handleSubmit}>
-                                Send Email</Button>
+                                    Send Email
+                                </Button>
                                 
                             </Form>
                         </Col>

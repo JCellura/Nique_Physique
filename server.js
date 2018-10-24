@@ -16,7 +16,8 @@ let s3 = new aws.S3({
 
 
 console.log(process.env);
-console.log(s3.NIQUE_EMAIL_ADDRESS);
+console.log(s3.config.niqueEmail);
+console.log(s3.config.niquePassword);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -43,12 +44,7 @@ app.post("/api/form", (req,res) => {
             <h3>Message</h3>
             <p>${req.body.message}</p>
 
-        `
-
-        if (process.env.NODE_ENV === "production") {
-            
-        }
-
+            `
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
             service: 'gmail',

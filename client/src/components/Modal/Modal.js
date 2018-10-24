@@ -29,7 +29,7 @@ class Trigger extends Component {
         return (
           <div>
             <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
-            <span class="modalTitle">{this.props.title}</span>
+            <span className="modalTitle">{this.props.title}</span>
             </Button>
     
             <Modal show={this.state.show} onHide={this.handleClose}>
