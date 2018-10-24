@@ -7,7 +7,16 @@ const PORT = process.env.PORT || 3001;
 
 require("dotenv").config();
 
+const aws = require('aws-sdk');
+
+let s3 = new aws.S3({
+  niqueEmail: process.env.NIQUE_EMAIL_ADDRESS,
+  niquePassword: process.env.NIQUE_EMAIL_PASSWORD
+});
+
+
 console.log(process.env);
+console.log(s3.NIQUE_EMAIL_ADDRESS);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,7 +42,13 @@ app.post("/api/form", (req,res) => {
             </ul>
             <h3>Message</h3>
             <p>${req.body.message}</p>
+
         `
+
+        if (process.env.NODE_ENV === "production") {
+            
+        }
+
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
             service: 'gmail',
