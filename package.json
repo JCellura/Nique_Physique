@@ -25,6 +25,7 @@
   "homepage": "https://github.com/JCellura/Nique_Physique#readme",
   "dependencies": {
     "aws": "0.0.3-2",
+    "aws-sdk": "^2.341.0",
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
     "dotenv": "^6.1.0",
