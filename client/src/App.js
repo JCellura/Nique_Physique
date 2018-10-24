@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Footer from "./components/Footer";
@@ -8,6 +8,8 @@ import Navbars from "./components/Navbar";
 import Home from "./pages/Home/Home.js";
 import Coaching from "./pages/Coaching/Coaching";
 import SocialMedia from "./pages/SocialMedia/SocialMedia"
+
+let hashHistory = Router.hasHishtory;
 
 
 class App extends Component {

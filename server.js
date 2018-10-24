@@ -5,6 +5,10 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+require("dotenv").config();
+
+console.log(process.env);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -36,8 +40,8 @@ app.post("/api/form", (req,res) => {
             // port: 465,
             // secure: true, // true for 465, false for other ports
             auth: {
-                user: "cellura.joseph@gmail.com", // generated ethereal user
-                pass: "Blind123" // generated ethereal password
+                user: process.env.NIQUE_EMAIL_ADDRESS, // generated ethereal user
+                pass: process.env.NIQUE_EMAIL_PASSWORD // generated ethereal password
             }
         });
 

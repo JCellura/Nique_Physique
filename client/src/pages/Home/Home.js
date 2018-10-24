@@ -7,6 +7,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from "../../components/Carousel/Carousel";
 import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from "react-bootstrap";
 import axios from "axios";
+const keys = require('../../utils/keys');
+require("dotenv").config();
 
 class Home extends Component {
     state = {
@@ -16,6 +18,10 @@ class Home extends Component {
     };
 
     componentDidMount() {
+        console.log(keys);
+        const emailKeys = keys.nique;
+        console.log(emailKeys);
+        console.log(process.env);
     }
 
     handleSubmit = event => {
