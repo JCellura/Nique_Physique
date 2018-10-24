@@ -13,7 +13,7 @@ import SocialMedia from "./pages/SocialMedia/SocialMedia"
 class App extends Component {
   render() {
     return (
-      <Router history>
+      <Router history={hashHistory}>
         <div>
           <Navbars />
           <Wrapper id={"wrapper"}>
