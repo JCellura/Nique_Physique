@@ -13,13 +13,13 @@ import SocialMedia from "./pages/SocialMedia/SocialMedia"
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history>
         <div>
           <Navbars />
           <Wrapper id={"wrapper"}>
             <Route exact path="/" component={Home} />
-            <Route exact path="/coaching" component={Coaching} />
-            <Route exact path="/social" component={SocialMedia} />
+            <Route path="/coaching" component={Coaching} />
+            <Route path="/social" component={SocialMedia} />
             {/* <Route exact path="/search" component={Search} /> */}
           </Wrapper>
           <Footer />
