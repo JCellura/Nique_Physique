@@ -27,7 +27,7 @@ let s3 = new aws.S3({
 });
 
 
-// console.log(process.env);
+console.log(process.env);
 console.log(s3.config.niqueEmail);
 console.log(s3.config.niquePassword);
 
@@ -41,6 +41,13 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
         res.sendFile(path.resolve("client/build", 'index.html'));
     });
+
+    twitterKeys = {
+        consumer_key: process.env.TWITTER_CONSUMER_KEY,
+        consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+        access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+        access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    }
 }
 
 app.post("/api/form", (req,res) => {
