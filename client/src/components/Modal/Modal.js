@@ -34,7 +34,7 @@ class Trigger extends Component {
     
             <Modal show={this.state.show} onHide={this.handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title><h2>{this.props.title}</h2></Modal.Title>
+                <Modal.Title>{this.props.title}</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <h4>{this.props.text}</h4>

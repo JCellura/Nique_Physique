@@ -4,8 +4,17 @@ const nodemailer = require("nodemailer");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const Twitter = require("twitter");
+const Instagram = require("node-instagram").default;
 
 require("dotenv").config();
+const keys = require("./client/src/utils/keys.js");
+const twitterKeys = keys.twitter;
+const instagram = new Instagram({
+    clientId: '085c05bfdf49413ea43cc18eef0f54f6',
+    clientSecret: '9647c511d33a44409a1d113d0606b677',
+    accessToken: '1194892336.085c05b.f732665aacec461e9d1ab278ef98ba45',
+  });
 
 const aws = require('aws-sdk');
 
@@ -15,7 +24,7 @@ let s3 = new aws.S3({
 });
 
 
-console.log(process.env);
+// console.log(process.env);
 console.log(s3.config.niqueEmail);
 console.log(s3.config.niquePassword);
 
@@ -75,6 +84,48 @@ app.post("/api/form", (req,res) => {
         })
 
     })
+
+});
+
+
+app.get("/api/socialmedia", (req,res) => {
+    
+    const client = new Twitter(twitterKeys);
+
+    let params = {screen_name: "fullstack_coder", count:10};
+
+    client.get('statuses/user_timeline', params, (error,tweets,response) => {
+        if (error) {
+            console.log(error);
+            return
+        } else {
+            var outputStr = '------------------------\n' +
+                        'User Tweets:\n' + 
+                        '------------------------\n\n';
+            
+            for (let i = 0; i < tweets.length; i++) {
+                outputStr += 'Created on: ' + tweets[i].created_at + '\n' + 
+                                'Tweet content: ' + tweets[i].text + '\n' +
+                                '------------------------\n';
+            }
+        }
+        console.log(outputStr);
+        res.json(tweets);
+    })
+
+})
+
+app.get("/api/socialmedia/instagram", (req,res) => {
+
+    instagram.get('users/self/media/recent', {count:4}, (err, data) => {
+        if (err) {
+          // an error occured
+          console.log(err);
+        } else {
+          console.log(data);
+          res.json(data);
+        }
+    });
 
 })
 

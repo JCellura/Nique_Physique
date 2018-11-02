@@ -11,6 +11,17 @@ h3 {
     font-style: italic;
 }
 
+.btn-primary {
+    background-color:#BB271B;
+    border-color:#C9A366;
+}
+
+.btn-primary:hover {
+    background-color:#C9A366;
+    border-color:#BB271B;
+}
+
+
 #pictures {
     margin-top: 15px;
 }
