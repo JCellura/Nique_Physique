@@ -12,7 +12,7 @@ const keys = require("./client/src/utils/keys.js");
 const instaKeys = require("./keys")
 const igKeys = instaKeys.instagram;
 console.log(igKeys);
-const twitterKeys = instaKeys.twitter;
+let twitterKeys = instaKeys.twitter;
 const instagram = new Instagram({
     clientId: igKeys.clientId,
     clientSecret: igKeys.clientSecret,
