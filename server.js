@@ -13,7 +13,12 @@ require("dotenv").config();
 const instaKeys = require("./keys")
 const igKeys = instaKeys.instagram;
 console.log(igKeys);
-let twitterKeys = instaKeys.twitter;
+const twitterKeys = {
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+}
 console.log(twitterKeys);
 const instagram = new Instagram({
     clientId: process.env.INSTAGRAM_CLIENT_ID,
@@ -52,22 +57,6 @@ router.get('/', function(req, res) {
 });
 //Use our router configuration when we call /api
 app.use('/api', router);
-
-if (process.env.NODE_ENV === 'production') {
-    // Exprees will serve up production assets
-    app.use(express.static(path.join(__dirname, 'client/build')))
-
-    // app.get('*', (req, res) => {
-    //     res.sendFile(path.resolve("client/build", 'index.html'));
-    // });
-
-    twitterKeys = {
-        consumer_key: process.env.TWITTER_CONSUMER_KEY,
-        consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-        access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-        access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-    }
-}
 
 app.post("/api/form", (req,res) => {
     console.log(req.body);
@@ -157,6 +146,16 @@ app.get("/api/socialmedia/instagram", (req,res) => {
     });
 
 })
+
+if (process.env.NODE_ENV === 'production') {
+    // Exprees will serve up production assets
+    app.use(express.static(path.join(__dirname, 'client/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve("client/build", 'index.html'));
+    });
+
+}
 
 
 app.listen(PORT, () => {
