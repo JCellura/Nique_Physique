@@ -9,11 +9,14 @@ const Instagram = require("node-instagram").default;
 
 require("dotenv").config();
 const keys = require("./client/src/utils/keys.js");
+const instaKeys = require("./keys")
+const igKeys = instaKeys.instagram;
+console.log(igKeys);
 const twitterKeys = keys.twitter;
 const instagram = new Instagram({
-    clientId: '085c05bfdf49413ea43cc18eef0f54f6',
-    clientSecret: '9647c511d33a44409a1d113d0606b677',
-    accessToken: '1194892336.085c05b.f732665aacec461e9d1ab278ef98ba45',
+    clientId: igKeys.clientId,
+    clientSecret: igKeys.clientSecret,
+    accessToken: igKeys.accessToken,
   });
 
 const aws = require('aws-sdk');
