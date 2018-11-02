@@ -11,7 +11,7 @@ class SocialMedia extends Component {
     };
 
     componentDidMount() {
-        
+
         this.getTweets();
         this.getIgPosts();
     }
@@ -22,7 +22,7 @@ class SocialMedia extends Component {
 
         ).then(response => {
 
-            // console.log(response);
+            console.log(response);
             this.setState({tweets:response.data})
             console.log(this.state.tweets)
 
@@ -34,7 +34,7 @@ class SocialMedia extends Component {
         axios.get("/api/socialmedia/instagram", {}
 
         ).then(response => {
-            // console.log(response);
+            console.log(response);
             this.setState({IGPosts:response.data.data})
             console.log(this.state.IGPosts);
         })
@@ -47,16 +47,16 @@ class SocialMedia extends Component {
                     <Col xs={12} sm={12} md={4} lg={4}>
                         <h3>Twitter</h3>
                         <div>
-                            {this.state.tweets.map(tweet =>  {
+                            {/* {this.state.tweets.map(tweet =>  {
                                 return <li key={tweet.id}> {tweet.text} </li>
-                            })}
+                            })} */}
                         </div>
                     </Col>
 
                     <Col xs={12} sm={12} md={4} lg={4}>
                         <h3>Instagram</h3>
                         <div>
-                            {this.state.IGPosts.map(post => {
+                            {/* {this.state.IGPosts.map(post => {
                                 return <img 
                                         key={post.id} 
                                         src={post.images.standard_resolution.url}
@@ -64,7 +64,7 @@ class SocialMedia extends Component {
                                         height="150"
                                         alt=""
                                         />
-                            })}
+                            })} */}
                         </div>
                     </Col>
 
