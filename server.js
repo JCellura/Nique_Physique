@@ -28,7 +28,7 @@ let s3 = new aws.S3({
 });
 
 
-console.log(process.env);
+// console.log(process.env);
 console.log(s3.config.niqueEmail);
 console.log(s3.config.niquePassword);
 
@@ -139,7 +139,7 @@ app.get("/api/socialmedia", (req,res) => {
             }
         }
         // console.log(outputStr);
-        res.json(tweets);
+        res.send(tweets);
     })
 
 })
@@ -152,7 +152,7 @@ app.get("/api/socialmedia/instagram", (req,res) => {
           console.log(err);
         } else {
           console.log(data);
-          res.json(data);
+          res.send(data);
         }
     });
 
