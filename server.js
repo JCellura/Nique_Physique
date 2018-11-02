@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const path = require("path");
 const cors = require("cors");
 const app = express();
+const router = express.Router();
 const PORT = process.env.PORT || 3001;
 const Twitter = require("twitter");
 const Instagram = require("node-instagram").default;
@@ -35,6 +36,22 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+   //and remove cacheing so we get the most recent appointments
+    res.setHeader('Cache-Control', 'no-cache');
+    next();
+});
+//now we can set the route path & initialize the API
+router.get('/', function(req, res) {
+    res.send({ message: 'API Initialized!'});
+    console.log('Api initialized');
+});
+//Use our router configuration when we call /api
+app.use('/api', router);
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
