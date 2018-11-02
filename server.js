@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const path = require("path");
+const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const Twitter = require("twitter");
@@ -32,6 +33,7 @@ console.log(s3.config.niquePassword);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
