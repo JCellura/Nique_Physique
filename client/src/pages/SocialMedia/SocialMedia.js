@@ -4,14 +4,14 @@ import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from
 import Twitter from "twitter";
 import axios from "axios";
 
-require("dotenv").config();
+// require("dotenv").config();
 
-const keys = require('../../utils/keys');
+// const keys = require('../../utils/keys');
 
-const twitterKeys = keys.twitter;
-console.log(twitterKeys);
+// const twitterKeys = keys.twitter;
+// console.log(twitterKeys);
 
-console.log(process.env);
+// console.log(process.env);
 
 
 class SocialMedia extends Component {
@@ -48,33 +48,7 @@ class SocialMedia extends Component {
             this.setState({IGPosts:response.data.data})
             console.log(this.state.IGPosts);
         })
-    }
-
-    retrieveTweets = () => {
-
-        const client = new Twitter(twitterKeys);
-
-        let params = {screen_name: "fullstack_coder", count:20};
-
-        client.get('statuses/user_timeline', params, (error,tweets,response) => {
-            if (error) {
-                console.log(error);
-                return
-            } else {
-                var outputStr = '------------------------\n' +
-							'User Tweets:\n' + 
-                            '------------------------\n\n';
-                
-                for (let i = 0; i < tweets.length; i++) {
-                    outputStr += 'Created on: ' + tweets[i].created_at + '\n' + 
-                                    'Tweet content: ' + tweets[i].text + '\n' +
-                                    '------------------------\n';
-                }
-            }
-            console.log(outputStr);
-        })
-
-    }
+    };
 
     render() {
         return (
