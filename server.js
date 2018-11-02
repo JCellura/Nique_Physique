@@ -31,9 +31,10 @@ console.log(process.env);
 console.log(s3.config.niqueEmail);
 console.log(s3.config.niquePassword);
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
