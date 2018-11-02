@@ -8,19 +8,18 @@ const Twitter = require("twitter");
 const Instagram = require("node-instagram").default;
 
 require("dotenv").config();
-const keys = require("./client/src/utils/keys.js");
 const instaKeys = require("./keys")
 const igKeys = instaKeys.instagram;
 console.log(igKeys);
 let twitterKeys = instaKeys.twitter;
+console.log(twitterKeys);
 const instagram = new Instagram({
-    clientId: igKeys.clientId,
-    clientSecret: igKeys.clientSecret,
-    accessToken: igKeys.accessToken,
+    clientId: process.env.INSTAGRAM_CLIENT_ID,
+    clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
+    accessToken: process.env.INSTAGRAM_ACCESS_TOKEN,
   });
 
 const aws = require('aws-sdk');
-
 let s3 = new aws.S3({
   niqueEmail: process.env.NIQUE_EMAIL_ADDRESS,
   niquePassword: process.env.NIQUE_EMAIL_PASSWORD

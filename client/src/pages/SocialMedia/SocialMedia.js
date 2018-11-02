@@ -4,16 +4,6 @@ import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from
 import Twitter from "twitter";
 import axios from "axios";
 
-// require("dotenv").config();
-
-// const keys = require('../../utils/keys');
-
-// const twitterKeys = keys.twitter;
-// console.log(twitterKeys);
-
-// console.log(process.env);
-
-
 class SocialMedia extends Component {
     state = {
         tweets: [],
@@ -21,7 +11,7 @@ class SocialMedia extends Component {
     };
 
     componentDidMount() {
-        // this.retrieveTweets();
+        
         this.getTweets();
         this.getIgPosts();
     }
@@ -72,6 +62,7 @@ class SocialMedia extends Component {
                                         src={post.images.standard_resolution.url}
                                         width="150"
                                         height="150"
+                                        alt=""
                                         />
                             })}
                         </div>
