@@ -8,7 +8,8 @@ const router = express.Router();
 const PORT = process.env.PORT || 3001;
 const Twitter = require("twitter");
 const Instagram = require("node-instagram").default;
-
+var FB = require('fb');
+ 
 require("dotenv").config();
 const instaKeys = require("./keys")
 const igKeys = instaKeys.instagram;
@@ -131,6 +132,97 @@ app.get("/api/socialmedia", (req,res) => {
         res.send(tweets);
     })
 
+});
+
+// var accessToken = 0;
+
+// FB.api('oauth/access_token', {
+//     client_id: '2163813753881842',
+//     client_secret: 'ec7c0c4bf756b3afa2e8f3d06bbea47f',
+//     grant_type: 'client_credentials',
+//     redirect_uri: 'http://localhost:3000/api/socialmedia/facebook'
+// }, function (res) {
+//     if(!res || res.error) {
+//         console.log(!res ? 'error occurred' : res.error);
+//         return;
+//     }
+
+//     accessToken = res.access_token;
+//     console.log(res);
+//     FB.setAccessToken(accessToken);
+//     var accessToken = FB.getAccessToken();
+//     console.log(accessToken);
+// })
+
+FB.setAccessToken("EAAevZBiYpBPIBAEyfsXqnipz6q0fxRJQY9H5u3BiRODiAMCvcEaAaFORikQhrfIziU4FERwr0ssM6KXBcnsi0PIrmOiHbzpB9iolP77feUqEyDe7mt2ltxARdws03Mxs5z8oTJ65p9nzIBxpO1tvIefDe9ZCwa2dtVxUekRv4kRDHDANf7ZADAEKHrLFGe3u8dwCF2uUPs7y8MX96xH6R5ro448Su8ZD");
+
+// FB.api('oauth/access_token', {
+//     client_id: '2163813753881842',
+//     client_secret: 'ec7c0c4bf756b3afa2e8f3d06bbea47f',
+//     grant_type: 'fb_exchange_token',
+//     fb_exchange_token: 'existing_access_token'
+// }, function (res) {
+//     if(!res || res.error) {
+//         console.log(!res ? 'error occurred' : res.error);
+//         return;
+//     }
+ 
+//     accessToken = res.access_token;
+//     var expires = res.expires ? res.expires : 0;
+//     console.log(accessToken);
+
+// });
+
+app.get("/api/socialmedia/facebook", (req,res) => {
+
+    console.log(FB);
+
+    // FB.api('oauth/access_token', {
+    //     client_id: '2163813753881842',
+    //     client_secret: 'ec7c0c4bf756b3afa2e8f3d06bbea47f',
+    //     grant_type: 'client_credentials'
+    // }, function (res) {
+    //     if(!res || res.error) {
+    //         console.log(!res ? 'error occurred' : res.error);
+    //         return;
+    //     }
+    
+    //     accessToken = res.access_token;
+    //     console.log(accessToken);
+    //     FB.options({accessToken: accessToken});
+    // })
+        
+    // FB.api('/me', { fields: 'id,name,picture.type(large)' }, function (res) {
+    //     if(!res || res.error) {
+    //       console.log(!res ? 'error occurred' : res.error);
+    //       return;
+    //     }
+    //     console.log(res.id);
+    //     console.log(res.name);
+    //   });
+
+    // FB.setAccessToken("EAAc66hs0QzIBAPULkekVAuy7M9Wlpb4oOZAFtSJzOZAtcPlDXhZCvu3WGSJbCOrwKbP94VlDfpa6V6HieGDFUsKmyuxSxZBU2H70dDi58IMjZC72XGSKj2hRyL4K3O6FwFXcdsmVZAkCUeWUI2EZAipCwdlw3afoCz0qQhF5a3i9COJZBV8pCc0VTmWxs2eqBxcLcj95ig6WvQZDZD");
+    
+    // var body = 'My first post using facebook-node-sdk';
+    //     FB.api('me/feed', 'post', { message: body }, function (res) {
+    //     if(!res || res.error) {
+    //         console.log(!res ? 'error occurred' : res.error);
+    //         return;
+    //     }
+    //     console.log('Post Id: ' + res.id);
+    //     });
+
+    // FB.api('/me', { fields: ['id', 'name', 'picture'] }, function (data) {
+    //     if(!res || res.error) {
+    //       console.log(!res ? 'error occurred' : res.error);
+    //       return;
+    //     }
+    //     console.log(data);
+  
+    //     res.send(data);
+    //   });
+    
+
 })
 
 app.get("/api/socialmedia/instagram", (req,res) => {
@@ -161,3 +253,4 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(PORT, () => {
     console.log(`Server Listening on Port ${PORT}`)
 });
+

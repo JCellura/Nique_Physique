@@ -65,3 +65,25 @@ h3 {
 
 }
 
+.figure {
+    height: 350px;
+}
+
+@media (max-width: 1100px) {
+
+    .figure {
+        height:300px;
+
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .figure {
+        height:350px;
+
+    }
+
+}
+

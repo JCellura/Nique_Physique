@@ -5,6 +5,7 @@ import Nique3 from "./Photos/Nique_Blue_Shorts.jpeg";
 import Nique4 from "./Photos/Nique_Red_Shirt.jpeg";
 import Nique5 from "./Photos/Nique_Teaching.jpg";
 import Nique6 from "./Photos/Nique_Coaching.jpeg";
+import NiqueBicep from "./Photos/nique_bicep.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import "./Carousel.css";

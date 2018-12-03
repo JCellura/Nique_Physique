@@ -4,6 +4,8 @@ import "./Coaching.css"
 // import Card from "../components/Card";
 // import Alert from "../components/Alert";
 import Nique from "./Nique.jpg";
+import Nique1 from "./Nique_Blue_Shorts.jpeg";
+import NiqueBicep from "./nique_bicep.png";
 import {Grid, Row, Col, Image, FormGroup, FormControl, Button, ControlLabel, Form} from "react-bootstrap";
 import Trigger from "../../components/Modal/Modal"
 
@@ -48,7 +50,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure"><Image src={Nique} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={6} md={6} lg={6} style={{marginTop:"20px"}} height="100%">
@@ -70,7 +72,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure"><Image src={Nique1} height= "100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                             </Row>
@@ -96,7 +98,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure"><Image src={Nique} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={6} md={6} lg={6} style={{marginTop:"20px"}} height="100%">
@@ -118,7 +120,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure"><Image src={Nique1} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                             </Row>
