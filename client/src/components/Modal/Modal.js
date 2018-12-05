@@ -24,7 +24,7 @@ class Trigger extends Component {
             {this.props.popoverText}
           </Popover>
         );
-        const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+        const tooltip = <Tooltip id="modal-tooltip">This Will Take You To Home Page</Tooltip>;
     
         return (
           <div>
@@ -38,36 +38,36 @@ class Trigger extends Component {
               </Modal.Header>
               <Modal.Body>
                 <h4>{this.props.text}</h4>
-                <p>
+                <div>
                   {this.props.textBody}
-                </p>
+                </div>
     
-                <h4>{this.props.popover}</h4>
+                {/* <h4>{this.props.popover}</h4>
                 <p>
                   there is a{' '}
                   <OverlayTrigger overlay={popover}>
                     <a href="#popover">popover</a>
                   </OverlayTrigger>{' '}
                   here
-                </p>
+                </p> */}
     
-                <h4>Tooltips in a modal</h4>
-                <p>
-                  there is a{' '}
-                  <OverlayTrigger overlay={tooltip}>
-                    <a href="#tooltip">tooltip</a>
-                  </OverlayTrigger>{' '}
-                  here
-                </p>
+                <h4>Send Me an Email!</h4>
+                  <p>
+                    Please feel free to send me an{' '}
+                    <OverlayTrigger overlay={tooltip}>
+                      <a href="/">email</a>
+                    </OverlayTrigger>{' '}
+                    regarding any questions/interests!
+                  </p>
     
-                <hr />
+                {/* <hr /> */}
     
-                <h4>Overflowing text to show scroll behavior</h4>
+                {/* <h4>Overflowing text to show scroll behavior</h4>
                 <p>
                   Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
                   dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
                   ac consectetur ac, vestibulum at eros.
-                </p>
+                </p> */}
               </Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.handleClose}>Close</Button>

@@ -7,6 +7,29 @@
     font-size: 25px;
 }
 
+.modal-title {
+    font-size: 25px;
+    font-weight:bold;
+    text-decoration:none;
+    text-align:center;
+}
+
+.modal-content {
+    background-color:#C9A366;
+    color:red;
+    font-family:verdana;
+    font-weight:bold;
+}
+
+h4 {
+    text-decoration:underline;
+}
+
+
+ul {
+    list-style: square outside url("./check1.png");
+}
+
 @media (max-width: 1200px ) {
 
     .modalTitle {

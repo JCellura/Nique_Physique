@@ -38,6 +38,14 @@ h3 {
 	transform: scale(1.05);
 }
 
+.modal-title {
+    font-size: "25px";
+}
+
+/* .modal-content {
+    font-style: "arial";
+} */
+
 /* Zoom In #1 */
 /* .programs figure img {
 	-webkit-transform: scale(1);

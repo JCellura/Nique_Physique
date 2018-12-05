@@ -56,11 +56,13 @@ class Home extends Component {
             <div>
                 <Grid>
                     <Row className="show-grid">
-                        <Col xs={12} md={8} lg={8}>
+                        <Col xs={12} md={6} lg={6}>
                             <Carousel/>
                         </Col>
-                        <Col id={"summary"} xs={12} md={4}>
-                            <p> I am a certified Personal Trainer and I can’t wait to begin our journey together! </p> 
+                        {/* <Col xs={0} s={0} md={2} lg={2}>
+                        </Col> */}
+                        <Col id={"summary"} xs={12} md={6} lg={6}>
+                            <p id="first_p"> I am a certified Personal Trainer and I can’t wait to begin our journey together! </p> 
                             
                             <p> In 2012 I graduated from Bowling Green State University with a Bachelors of Science degree in Physical Education and an APE Endorsement. In 2016 I received my Masters of Science in Health Education, as well as becoming a certified personal trainer.
                                 Shortly after graduation I began my teaching and coaching career both in athletics, and fitness. I have a strong passion for helping others and will continue to do so in a BIG way!</p>
@@ -71,7 +73,7 @@ class Home extends Component {
                     </Row>
 
                      <Row className="show-grid">
-                        <Col id="emailForm" xs={12} md={8} lg={8}>
+                        <Col id="emailForm" xs={12} md={6} lg={6}>
                             <Form horizontal>
                                 <FormGroup>
                                 <ControlLabel>Send Me Email With Any Questions</ControlLabel>

@@ -18,10 +18,16 @@ nav.navbar.navbar-default {
   border-color: #AB6D45;
   border-width: 3px;
   background-color: #BB271B;
+  font-family: verdana;
+  font-size: 110%;
 }
 
 .navbar {
   max-height: 170px;
+}
+
+.navbar-brand {
+  font-size: 120%;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -40,6 +46,24 @@ nav.navbar.navbar-default {
   width:fit-content;
   z-index:1000;
   position:absolute;
+  font-size: 90%;
+}
+
+.navbar-brand {
+  font-size: 140%;
 }
 
 }
+
+@media (max-width: 990px) {
+  #bar {
+    font-size:95%;
+  }
+}
+
+/* @media (max-width: 990px) {
+  #bar {
+    font-size:95%;
+  }
+} */
+
