@@ -103,13 +103,13 @@ class SocialMedia extends Component {
                         <h3>Instagram</h3>
                         <div>
                             {this.state.IGPosts.map((post, i) => {
-                                return <div className="igImage"><img 
+                                return <a href={post.link}><div className="igImage"><img 
                                         key={i} 
                                         src={post.images.standard_resolution.url}
                                         width="150"
                                         height="150"
                                         alt=""
-                                        /></div>
+                                        /></div></a>
                             })}
                         </div>
                     </Col>

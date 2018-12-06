@@ -130,7 +130,7 @@ app.get("/api/socialmedia", (req,res) => {
         }
         // console.log(outputStr);
         res.send(tweets);
-        // console.log(tweets);
+        console.log(tweets);
     })
 
 });
