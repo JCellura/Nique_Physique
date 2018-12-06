@@ -130,7 +130,7 @@ app.get("/api/socialmedia", (req,res) => {
         }
         // console.log(outputStr);
         res.send(tweets);
-        console.log(tweets);
+        // console.log(tweets);
     })
 
 });
@@ -233,7 +233,7 @@ app.get("/api/socialmedia/instagram", (req,res) => {
           // an error occured
           console.log(err);
         } else {
-          console.log(data);
+        //   console.log(data);
           res.send(data);
         }
     });

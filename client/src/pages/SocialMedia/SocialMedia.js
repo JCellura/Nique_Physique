@@ -4,6 +4,8 @@ import {Grid, Row, Col, FormGroup, FormControl, Button, ControlLabel, Form} from
 import axios from "axios";
 // import FacebookLogin from 'react-facebook-login';
 // import { FacebookProvider, Page, LoginButton } from 'react-facebook';
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import InstagramEmbed from 'react-instagram-embed';
 
 class SocialMedia extends Component {
     state = {
@@ -30,8 +32,15 @@ class SocialMedia extends Component {
             console.log(response);
             this.setState({tweets:response.data})
             console.log(this.state.tweets)
+            console.log(this.state.tweets[0].entities.media[0].display_url);
+
+            this.state.tweets.forEach(tweet => {
+                console.log("no");
+            })
 
         })
+
+        
     };
 
     getIgPosts = (event) => {
@@ -92,11 +101,26 @@ class SocialMedia extends Component {
                 <Row>
                     <Col xs={12} sm={12} md={4} lg={4}>
                         <h3>Twitter</h3>
-                        <div>
+                        <TwitterTimelineEmbed
+                        sourceType="profile"
+                        screenName="coachsand23"
+                        options={{height: 400}}
+                        />
+                        {/* <div>
                             {this.state.tweets.map((tweet, i) =>  {
-                                return <li key={i}> {tweet.text} </li>
+                                return ( tweet.entities.media ? (
+                                    <div className="igImage">
+                                            <img 
+                                                key={i}
+                                                src={tweet.entities.media[0].media_url_https}  // expanded display media media_url_https
+                                                width="150"
+                                                height="150"
+                                                alt="help"
+                                            />
+                                    </div>
+                                ) : (console.log("no")) ) 
                             })}
-                        </div>
+                        </div> */}
                     </Col>
 
                     <Col xs={12} sm={12} md={4} lg={4}>
@@ -132,6 +156,22 @@ class SocialMedia extends Component {
                             data-hide-cover="false" 
                             data-show-facepile="true">
                         </div> */}
+                        {/* <FacebookProvider appId="2163813753881842">
+                            <Page href="https://www.facebook.com/joe.cellura.1" tabs="timeline" />
+                        </FacebookProvider>  */}
+                        <InstagramEmbed
+                            url='https://www.instagram.com/p/BrDkRXkASDt/'
+                            maxWidth={320}
+                            hideCaption={false}
+                            containerTagName='div'
+                            protocol=''
+                            injectScript
+                            onLoading={() => {}}
+                            onSuccess={() => {}}
+                            onAfterRender={() => {}}
+                            onFailure={() => {}}
+                            style={{marginLeft:"20px"}}
+                        />
                     </Col>            
                 </Row>
             </Grid>
