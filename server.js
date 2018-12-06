@@ -76,8 +76,8 @@ app.post("/api/form", (req,res) => {
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
             service: 'gmail',
-            // port: 465,
-            // secure: true, // true for 465, false for other ports
+            port: 465,
+            secure: true, // true for 465, false for other ports
             auth: {
                 user: process.env.NIQUE_EMAIL_ADDRESS, // generated ethereal user
                 pass: process.env.NIQUE_EMAIL_PASSWORD // generated ethereal password
@@ -87,7 +87,7 @@ app.post("/api/form", (req,res) => {
         let mailOptions = {
             from: '"Nique Physique" <Nique@gmail.com>',
             // from: req.body.email,
-            to: "cellura.joseph@gmail.com",
+            to: "sandersbg23@gmail.com",
             replyTo: req.body.email,
             subject: "New Message From Website",
             text: req.body.message,
@@ -111,7 +111,7 @@ app.get("/api/socialmedia", (req,res) => {
     
     const client = new Twitter(twitterKeys);
 
-    let params = {screen_name: "fullstack_coder", count:10};
+    let params = {screen_name: "coachsand23", count:10};
 
     client.get('statuses/user_timeline', params, (error,tweets,response) => {
         if (error) {
@@ -130,6 +130,7 @@ app.get("/api/socialmedia", (req,res) => {
         }
         // console.log(outputStr);
         res.send(tweets);
+        // console.log(tweets);
     })
 
 });

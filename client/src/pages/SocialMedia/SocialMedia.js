@@ -93,8 +93,8 @@ class SocialMedia extends Component {
                     <Col xs={12} sm={12} md={4} lg={4}>
                         <h3>Twitter</h3>
                         <div>
-                            {this.state.tweets.map(tweet =>  {
-                                return <li key={tweet.id}> {tweet.text} </li>
+                            {this.state.tweets.map((tweet, i) =>  {
+                                return <li key={i}> {tweet.text} </li>
                             })}
                         </div>
                     </Col>
@@ -102,9 +102,9 @@ class SocialMedia extends Component {
                     <Col xs={12} sm={12} md={4} lg={4}>
                         <h3>Instagram</h3>
                         <div>
-                            {this.state.IGPosts.map(post => {
+                            {this.state.IGPosts.map((post, i) => {
                                 return <div className="igImage"><img 
-                                        key={post.id} 
+                                        key={i} 
                                         src={post.images.standard_resolution.url}
                                         width="150"
                                         height="150"
