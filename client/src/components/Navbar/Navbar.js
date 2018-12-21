@@ -60,8 +60,8 @@ const Navbars = props => (
           </NavDropdown>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">
-            Sponsers
+          <NavItem eventKey={1} href="/affiliations">
+            Affiliations
           </NavItem>
           <NavItem eventKey={2} href="/social">
             Social Media

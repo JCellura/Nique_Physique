@@ -32,7 +32,7 @@ class SocialMedia extends Component {
             console.log(response);
             this.setState({tweets:response.data})
             console.log(this.state.tweets)
-            console.log(this.state.tweets[0].entities.media[0].display_url);
+            // console.log(this.state.tweets[0].entities.media[0].display_url);
 
             this.state.tweets.forEach(tweet => {
                 console.log("no");
@@ -160,7 +160,7 @@ class SocialMedia extends Component {
                             <Page href="https://www.facebook.com/joe.cellura.1" tabs="timeline" />
                         </FacebookProvider>  */}
                         <InstagramEmbed
-                            url='https://www.instagram.com/p/BrDkRXkASDt/'
+                            url='https://www.instagram.com/p/BroK_iuAh6T/'
                             maxWidth={320}
                             hideCaption={false}
                             containerTagName='div'

@@ -7,7 +7,8 @@ import Wrapper from "./components/Wrapper";
 import Navbars from "./components/Navbar";
 import Home from "./pages/Home/Home.js";
 import Coaching from "./pages/Coaching/Coaching";
-import SocialMedia from "./pages/SocialMedia/SocialMedia"
+import SocialMedia from "./pages/SocialMedia/SocialMedia";
+import Affiliations from "./pages/Affiliations";
 
 let hashHistory = Router.hasHishtory;
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/coaching" component={Coaching} />
             <Route path="/social" component={SocialMedia} />
+            <Route path="/affiliations" component={Affiliations} />
             {/* <Route exact path="/search" component={Search} /> */}
           </Wrapper>
           <Footer />
