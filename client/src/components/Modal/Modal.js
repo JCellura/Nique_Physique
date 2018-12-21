@@ -24,7 +24,7 @@ class Trigger extends Component {
             {this.props.popoverText}
           </Popover>
         );
-        const tooltip = <Tooltip id="modal-tooltip">This Will Take You To Home Page</Tooltip>;
+        const tooltip = <Tooltip id="modal-tooltip">Email Form</Tooltip>;
     
         return (
           <div>
@@ -53,9 +53,9 @@ class Trigger extends Component {
     
                 <h4>Send Me an Email!</h4>
                   <p>
-                    Please feel free to send me an{' '}
+                    Please send me an{' '}
                     <OverlayTrigger overlay={tooltip}>
-                      <a href="/">email</a>
+                      <a href="/#emailForm">email</a>
                     </OverlayTrigger>{' '}
                     regarding any questions/interests!
                   </p>
