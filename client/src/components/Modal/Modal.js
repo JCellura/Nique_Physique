@@ -52,7 +52,7 @@ class Trigger extends Component {
                 </p> */}
     
                 <h4>Send Me an Email!</h4>
-                  <p>
+                  <p id="coachingEmail">
                     Please send me an{' '}
                     <OverlayTrigger overlay={tooltip}>
                       <a href="/#emailForm">email</a>
