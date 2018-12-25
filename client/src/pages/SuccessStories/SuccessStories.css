@@ -1,0 +1,66 @@
+.figure {
+    height:300px;
+    margin-top: 10px;
+    border-style:solid;
+    border-color:white;
+    border-width:3px;
+}
+
+h1 {
+    text-align:center;
+    font-weight:bold;
+}
+
+p {
+    text-align: center;
+    font-size: 120%;
+}
+
+
+.carousel .thumb:hover {
+    height: 90px;
+    width: 90px;
+}
+
+.carousel .control-dots {
+    padding-left: 0px;
+}
+
+/* .thumbs :animated {
+    transform: translate3d(-86px, 0px, 0px);
+} */
+
+.carousel .thumb {
+    width:80px;
+    height:80px;
+    /* padding-left: 5px; */
+}
+
+.carousel .thumbs {
+    padding-left: 5px;
+}
+
+@media (max-width: 450px ) {
+
+
+    .carousel .thumbs {
+        padding-left: 35px;
+    }
+    
+}
+
+.carousel .control-next.control-arrow {
+    right: -3%;
+}
+
+.carousel .control-prev.control-arrow {
+    left: -3%;
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 15px solid white;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 15px solid white;
+}

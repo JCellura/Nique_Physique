@@ -1,0 +1,26 @@
+#figure {
+    height: 400px;
+}
+
+@media (max-width: 1200px ) {
+
+
+#figure {
+    height: 350px;
+}
+
+}
+
+@media (max-width: 1100px ) {
+
+
+    .figure {
+        height: 350px;
+    }
+    
+}
+
+
+.btn {
+    margin-top: 150px;
+}

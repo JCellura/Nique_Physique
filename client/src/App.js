@@ -9,8 +9,11 @@ import Home from "./pages/Home/Home.js";
 import Coaching from "./pages/Coaching/Coaching";
 import SocialMedia from "./pages/SocialMedia/SocialMedia";
 import Affiliations from "./pages/Affiliations";
+import Training from "./pages/Training";
+import Kurt from "./pages/SuccessStories/Kurt";
+import HSFootball from "./pages/SuccessStories/HSFootball";
 
-let hashHistory = Router.hasHishtory;
+let hashHistory = Router.hashHistory;
 
 
 class App extends Component {
@@ -24,6 +27,9 @@ class App extends Component {
             <Route path="/coaching" component={Coaching} />
             <Route path="/social" component={SocialMedia} />
             <Route path="/affiliations" component={Affiliations} />
+            <Route path="/training" component={Training} />
+            <Route path="/success/kurt" component={Kurt} />
+            <Route path="/success/hsfootball" component={HSFootball} />
             {/* <Route exact path="/search" component={Search} /> */}
           </Wrapper>
           <Footer />
