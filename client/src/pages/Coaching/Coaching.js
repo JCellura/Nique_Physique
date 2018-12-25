@@ -50,7 +50,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure className="figure"><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure1"><Image src={Nique} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={6} md={6} lg={6} style={{marginTop:"20px"}} height="100%">
@@ -72,7 +72,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure className="figure"><Image src={Nique1} height= "100%" width="100%"/></figure>
+                                        <figure className="figure1"><Image src={Nique1} height= "100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                             </Row>
@@ -98,7 +98,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure className="figure"><Image src={Nique} height="100%" width="100%"/></figure>
+                                        <figure className="figure1"><Image src={Nique} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={6} md={6} lg={6} style={{marginTop:"20px"}} height="100%">
@@ -120,7 +120,7 @@ class Home extends Component {
                                                         </ul>}
                                             />
                                         </div>
-                                        <figure className="figure"><Image src={Nique1} height="100%" width="100%"/></figure>
+                                        <figure className="figure1"><Image src={Nique1} height="100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                             </Row>

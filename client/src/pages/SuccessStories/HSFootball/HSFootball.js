@@ -41,7 +41,7 @@ class HSFootball extends Component {
                                     <div className="programs">
                                         <div className="programInfo">
                                         </div>
-                                        <figure className="figure"><Image src={NiqueCoaching} height= "100%" width="100%"/></figure>
+                                        <figure className="figure2"><Image src={NiqueCoaching} height= "100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                                 <Col lg={6}>
@@ -51,7 +51,7 @@ class HSFootball extends Component {
                                     <div className="programs">
                                         <div className="programInfo">
                                         </div>
-                                        <figure className="figure"><Image src={MirrorShot} height= "100%" width="100%"/></figure>
+                                        <figure className="figure2"><Image src={MirrorShot} height= "100%" width="100%"/></figure>
                                     </div>
                                 </Col>
                             </Row>

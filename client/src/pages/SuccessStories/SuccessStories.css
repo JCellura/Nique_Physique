@@ -6,6 +6,14 @@
     border-width:3px;
 }
 
+.figure2 {
+    height:300px;
+    margin-top: 20px;
+    border-style:solid;
+    border-color:white;
+    border-width:3px;
+}
+
 h1 {
     text-align:center;
     font-weight:bold;

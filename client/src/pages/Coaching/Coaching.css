@@ -73,13 +73,16 @@ h3 {
 
 }
 
-.figure {
+.figure1 {
     height: 350px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
-    .figure {
+    .figure1 {
         height:300px;
 
     }
@@ -88,7 +91,7 @@ h3 {
 
 @media (max-width: 450px) {
 
-    .figure {
+    .figure1 {
         height:350px;
 
     }
