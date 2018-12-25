@@ -18,7 +18,7 @@ class Training extends Component {
                         <Col xs={0} md={1} lg={1} height="300px">
                         </Col>
                         <Col id="pictures" xs={12} md={10} lg={10} height="300px">
-                            <Row height="100%">
+                            <Row id="trainingRow" height="100%">
                                 <Col xs={12} sm={6} md={6} lg={6} style={{marginTop:"20px"}} height="100%">
                                     <div className="programs">
                                         <div className="programInfo">

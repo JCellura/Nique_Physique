@@ -29,35 +29,36 @@ class Affiliations extends Component {
                             <div>
                                 <Col xs={12} s={12} lg={12}>
                                     <a href="https://www.heraxhero.com">
-                                        <div className="">
+                                        <div id="" className="">
                                             <Image
                                                 src={HeraBanner}
                                                 width="100%"
                                             />
                                         </div>
                                     </a>
-                                    <a href="https://www.heraxhero.com">
-                                        <div className="image-container">
+                                    <div className="image-container">
+                                        <a href="https://www.heraxhero.com">
                                             <Image
                                                 className= "Hera"
                                                 src={Hera}
+                                                id="Logo"
                                             />
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </Col>
                             </div>
                         </Col>
 
                         <Col xs={12} s={6} md={6} lg={6}>
                             <Col xs={0} s={0} md={0} lg={12}>
-                                <a href="https://www.heraxhero.com">
-                                    <div className="image-container">
+                                <div className="image-container">
+                                    <a href="https://www.heraxhero.com">
                                         <Image
                                             className= "NiqueHera"
                                             src={NiqueHero}
                                         />
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </Col>
                         </Col>
                     </Row>

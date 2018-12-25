@@ -35,7 +35,7 @@ class Home extends Component {
                                     <div className="programs">
                                         <div className="programInfo">
                                             {/* <h2> 10 Week Program </h2> */}
-                                            <Trigger 
+                                            <Trigger
                                                 title="6 Week Program"
                                                 text="This Complete Program Includes:"
                                                 textBody={

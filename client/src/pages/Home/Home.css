@@ -10,6 +10,10 @@
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
+#button {
+    margin-top:0px;
+}
+
 .show-grid {
     margin-top: 20px;
 }

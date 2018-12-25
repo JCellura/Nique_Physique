@@ -108,6 +108,7 @@ class Home extends Component {
 
                                 <Button 
                                     type="submit"
+                                    id="button"
                                     onClick={this.handleSubmit}>
                                     Send Email
                                 </Button>
